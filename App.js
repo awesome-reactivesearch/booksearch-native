@@ -198,6 +198,18 @@ export default class App extends React.Component {
       </View>
     );
 
+    const MatchAllPseudoComponent = (
+      <DataController
+        componentId="ShowAll"
+        visible={false}
+        customQuery={value => {
+          return {
+            match_all: {}
+          };
+        }}
+      />
+    );
+
 
     // @expo: fonts loading isReady state
     if (!this.state.isReady) {
