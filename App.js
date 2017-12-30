@@ -188,6 +188,15 @@ export default class App extends React.Component {
       </Header>
     );
 
+    const SearchComponent = (
+      <View style={s.searchBooksContainer}>
+        <TextField
+          componentId="SearchText"
+          dataField="title"
+          placeholder="Search books"
+        />
+      </View>
+    );
 
 
     // @expo: fonts loading isReady state
