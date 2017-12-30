@@ -179,6 +179,16 @@ export default class App extends React.Component {
       </View>
     );
 
+    const header = (
+      <Header style={s.header}>
+        <Body style={s.headerBody}>
+          <Icon name="book" size={20} color="#D1C4E9" style={s.headerIcon} />
+          <Title style={s.headerTitle}>Good Books</Title>
+        </Body>
+      </Header>
+    );
+
+
 
     // @expo: fonts loading isReady state
     if (!this.state.isReady) {
