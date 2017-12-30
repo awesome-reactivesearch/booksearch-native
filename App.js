@@ -210,6 +210,36 @@ export default class App extends React.Component {
       />
     );
 
+    const BookRow = (
+      <View style={s.booksRow}>
+        <View style={s.booksRowContainer}>
+          <Image
+            source={{
+              uri: "https://images.gr-assets.com/books/1452956236l/12749.jpg"
+            }}
+            style={s.booksImage}
+          />
+        </View>
+        <View style={s.bookInfoSection}>
+          <Text style={s.bookTitle}>
+            Flora and Ulysses: The Illuminated Adventures
+          </Text>
+          <Text style={s.bookAuthorSection}>
+            {/* by {""} */}
+            <Text style={s.bookAuthor}>Kate DiCamillo, K.G. Campbell</Text>
+          </Text>
+          <Text style={s.bookPublication}>Pub 2017</Text>
+          <View style={s.bookStars}>
+            <Icon name="star" size={20} color="gold" />
+            <Icon name="star" size={20} color="gold" />
+            <Icon name="star" size={20} color="gold" />
+            <Icon name="star" size={20} color="gold" />
+            <Icon name="star" size={20} color="gold" />
+            <Text style={s.bookRatings}>(4.7 avg)</Text>
+          </View>
+        </View>
+      </View>
+    );
 
     // @expo: fonts loading isReady state
     if (!this.state.isReady) {
