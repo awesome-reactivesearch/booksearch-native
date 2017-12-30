@@ -23,15 +23,15 @@ import {
   Thumbnail,
   Button
 } from "native-base";
-
 import {
   ReactiveBase,
   DataController,
   TextField,
   ReactiveList
 } from "@appbaseio/reactivebase-native";
-
 import Icon from "react-native-vector-icons/FontAwesome";
+
+import { APPBASE_CONFIG } from './config'
 
 {
   /* <ReactiveList
@@ -144,11 +144,12 @@ export default class App extends React.Component {
   async componentWillMount() {
     // @expo: fonts load
 
-    await Expo.Font.loadAsync({
-      Roboto: require("native-base/Fonts/Roboto.ttf"),
-      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
-      Ionicons: require("native-base/Fonts/Ionicons.ttf")
-    });
+    if (Expo && Expo.Font)
+      await Expo.Font.loadAsync({
+        Roboto: require("native-base/Fonts/Roboto.ttf"),
+        Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
+        Ionicons: require("native-base/Fonts/Ionicons.ttf")
+      });
 
     this.setState({ isReady: true });
   }
@@ -253,16 +254,14 @@ export default class App extends React.Component {
           {header}
           <ScrollView style={s.flex}>
             <ReactiveBase
-              app="books-native"
-              credentials="2WQ5N6vmf:7cc1218e-464b-49a0-9e5a-8dbc720cc543"
-              type="good-books-live"
+              app={APPBASE_CONFIG.app}
+              credentials={APPBASE_CONFIG.credentials}
+              type={APPBASE_CONFIG.type}
             >
               <View style={s.padding5} />
               {SearchComponent}
               {MatchAllPseudoComponent}
-              <Content style={s.booksContainer}>
-                {BookRow}
-              </Content>
+              <Content style={s.booksContainer}>{BookRow}</Content>
             </ReactiveBase>
           </ScrollView>
         </View>
