@@ -261,36 +261,15 @@ export default class App extends Component {
             Pub {bookData.original_publication_year}
           </Text>
           <View style={styles.bookStars}>
-            <Icon
-              name="star"
-              size={20}
-              color="gold"
-              style={{ color: "gold" }}
-            />
-            <Icon
-              name="star"
-              size={20}
-              color="gold"
-              style={{ color: "gold" }}
-            />
-            <Icon
-              name="star"
-              size={20}
-              color="gold"
-              style={{ color: "gold" }}
-            />
-            <Icon
-              name="star"
-              size={20}
-              color="gold"
-              style={{ color: "gold" }}
-            />
-            <Icon
-              name="star"
-              size={20}
-              color="gold"
-              style={{ color: "gold" }}
-            />
+            {[...Array(bookData.average_rating_rounded)].map((e, i) => (
+              <Icon
+                key={i}
+                name="star"
+                size={20}
+                color="gold"
+                style={{ color: "gold" }}
+              />
+            ))}
             <Text style={styles.bookRatings}>
               ({bookData.average_rating} avg)
             </Text>
