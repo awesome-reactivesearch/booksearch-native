@@ -335,7 +335,7 @@ export default class App extends Component {
             color="#D1C4E9"
             style={styles.headerIcon}
           />
-          <Title style={styles.headerTitle}>Good Books</Title>
+          <Title style={styles.headerTitle}>Book Search</Title>
         </Body>
       </Header>
     );
