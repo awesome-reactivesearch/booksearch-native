@@ -2,24 +2,24 @@
 # yarn lockfile v1
 
 
-"@appbaseio/reactivebase-native@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@appbaseio/reactivebase-native/-/reactivebase-native-0.2.1.tgz#e5d65521fbfcd5bf2b34af6583dde4b34d49e7ce"
+"@appbaseio/reactivebase-native@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@appbaseio/reactivebase-native/-/reactivebase-native-0.3.1.tgz#1b2646212875d7bd29cfbefca5a8f3a2544e62c6"
   dependencies:
-    "@appbaseio/reactivecore" "^0.1.3"
+    "@appbaseio/reactivecore" "^1.2.5"
     "@ptomasroos/react-native-multi-slider" "^0.0.11"
     appbase-js "^2.2.1"
     native-base "^2.3.3"
     prop-types "^15.6.0"
-    react-native-calendars "^1.9.3"
+    react-native-calendars "^1.16.1"
     react-redux "^5.0.6"
     redux "^3.7.2"
     redux-thunk "^2.2.0"
     xdate "^0.8.2"
 
-"@appbaseio/reactivecore@^0.1.3":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@appbaseio/reactivecore/-/reactivecore-0.1.4.tgz#e341b2042e570896fcbe08a9f2ecd7ed5967906a"
+"@appbaseio/reactivecore@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@appbaseio/reactivecore/-/reactivecore-1.2.5.tgz#8db23e7a4da00ff04b47e8464276e45a96066737"
   dependencies:
     prop-types "^15.6.0"
     redux "^3.7.2"
@@ -4006,24 +4006,24 @@ nan@^2.3.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.8.0.tgz#ed715f3fe9de02b57a5e6252d90a96675e1f085a"
 
-native-base-shoutem-theme@0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/native-base-shoutem-theme/-/native-base-shoutem-theme-0.2.1.tgz#8494783833dcc5bace945db68dc7bfce209fcc40"
+native-base-shoutem-theme@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/native-base-shoutem-theme/-/native-base-shoutem-theme-0.2.2.tgz#5823310455fe391adf72236469c039fd44f56a20"
   dependencies:
     hoist-non-react-statics "^1.0.5"
     lodash "^4.10.1"
     prop-types "^15.5.10"
 
 native-base@^2.3.3:
-  version "2.3.5"
-  resolved "https://registry.yarnpkg.com/native-base/-/native-base-2.3.5.tgz#3a9104a71ccc1b48e99d1939abdcab9d6cd71b45"
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/native-base/-/native-base-2.3.6.tgz#3e81d0a7c2d65e535ad68ee6299069beff0a1366"
   dependencies:
     blueimp-md5 "^2.5.0"
     clamp "^1.0.1"
     color "~1.0.3"
     fs-extra "^2.0.0"
     lodash "~4.11.1"
-    native-base-shoutem-theme "0.2.1"
+    native-base-shoutem-theme "0.2.2"
     print-message "^2.1.0"
     prop-types "^15.5.10"
     react-native-drawer "https://github.com/GeekyAnts/react-native-drawer"
@@ -4676,7 +4676,7 @@ react-native-branch@2.0.0-beta.3:
   version "2.0.0-beta.3"
   resolved "https://registry.yarnpkg.com/react-native-branch/-/react-native-branch-2.0.0-beta.3.tgz#2167af86bbc9f964bd45bd5f37684e5b54965e32"
 
-react-native-calendars@^1.9.3:
+react-native-calendars@^1.16.1:
   version "1.16.1"
   resolved "https://registry.yarnpkg.com/react-native-calendars/-/react-native-calendars-1.16.1.tgz#b1729e329996a1cd11e43479c7612a213712ee4b"
   dependencies:
@@ -4755,7 +4755,7 @@ react-native-vector-icons@4.4.2:
     prop-types "^15.5.10"
     yargs "^8.0.2"
 
-react-native-vector-icons@~4.4.2:
+react-native-vector-icons@^4.4.3, react-native-vector-icons@~4.4.2:
   version "4.4.3"
   resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-4.4.3.tgz#9e847b8c432a17e5e0ffd60ccf09f3112a18b9df"
   dependencies:
