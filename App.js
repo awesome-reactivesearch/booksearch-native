@@ -306,6 +306,12 @@ export default class App extends Component {
       )
     }
 
+    return (
+      <View>
+        <StatusBar barStyle="dark-content" />
+      </View>
+    )
+
     return null;
   }
 
