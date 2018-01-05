@@ -245,6 +245,7 @@ export default class App extends Component {
 
   renderBookCard(bookData) {
     return (
+      <TouchableOpacity onPress={() => web("https://google.com/search?q=" + bookData.original_title)}>
         <View style={[styles.fullWidth, styles.booksRow]}>
           <View style={styles.booksRowContainer}>
             <Image
@@ -278,6 +279,7 @@ export default class App extends Component {
             </View>
           </View>
         </View>
+      </TouchableOpacity>
     );
   }
 
