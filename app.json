@@ -1,15 +1,17 @@
 {
   "expo": {
-   "name": "Book Search",
-   "icon": "./icon.png",
-   "version": "1.0.0",
-   "slug": "book-search",
-   "sdkVersion": "23.0.0",
-   "ios": {
-     "bundleIdentifier": "com.appbaseio.booksearch"
-   },
-   "android": {
-     "package": "com.appbaseio.booksearch"
-   }
-  }
+    "name": "Book Search",
+    "icon": "./icon.png",
+    "version": "1.0.0",
+    "slug": "book-search",
+    "sdkVersion": "23.0.0",
+    "ios": {
+      "bundleIdentifier": "com.appbaseio.booksearch"
+    },
+    "android": {
+      "package": "com.appbaseio.booksearch"
+    }
+  },
+  "name": "booksnative",
+  "displayName": "Book Search"
 }
