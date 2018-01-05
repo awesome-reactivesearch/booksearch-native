@@ -1,4 +1,4 @@
-import Expo from "expo";
+// import Expo from "expo";
 import React, { Component } from "react";
 import {
   Image,
@@ -9,6 +9,7 @@ import {
   Dimensions,
   StatusBar,
   FlatList,
+  TouchableOpacity,
 } from "react-native";
 import {
   Body,
@@ -28,6 +29,7 @@ import {
   DataController,
   ReactiveList,
 } from "@appbaseio/reactivebase-native";
+import { web } from "react-native-communications";
 
 import { APPBASE_CONFIG } from "./config";
 
@@ -183,10 +185,10 @@ export default class App extends Component {
   }
 
   async componentWillMount() {
-    await Expo.Font.loadAsync({
-      Roboto: require("native-base/Fonts/Roboto.ttf"),
-      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf")
-    });
+    // await Expo.Font.loadAsync({
+    //   Roboto: require("native-base/Fonts/Roboto.ttf"),
+    //   Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf")
+    // });
 
     this.setState({ isReady: true });
   }
@@ -243,39 +245,39 @@ export default class App extends Component {
 
   renderBookCard(bookData) {
     return (
-      <View style={[styles.fullWidth, styles.booksRow]}>
-        <View style={styles.booksRowContainer}>
-          <Image
-            source={{
-              uri: bookData.image
-            }}
-            style={styles.booksImage}
-          />
-        </View>
-        <View style={styles.bookInfoSection}>
-          <Text style={styles.bookTitle}>{bookData.title}</Text>
-          <Text style={styles.bookAuthorSection}>
-            <Text style={styles.bookAuthor}>{bookData.authors}</Text>
-          </Text>
-          <Text style={styles.bookPublication}>
-            Pub {bookData.original_publication_year}
-          </Text>
-          <View style={styles.bookStars}>
-            {[...Array(bookData.average_rating_rounded)].map((e, i) => (
-              <Icon
-                key={i}
-                name="star"
-                size={20}
-                color="gold"
-                style={{ color: "gold" }}
-              />
-            ))}
-            <Text style={styles.bookRatings}>
-              ({bookData.average_rating} avg)
+        <View style={[styles.fullWidth, styles.booksRow]}>
+          <View style={styles.booksRowContainer}>
+            <Image
+              source={{
+                uri: bookData.image
+              }}
+              style={styles.booksImage}
+            />
+          </View>
+          <View style={styles.bookInfoSection}>
+            <Text style={styles.bookTitle}>{bookData.title}</Text>
+            <Text style={styles.bookAuthorSection}>
+              <Text style={styles.bookAuthor}>{bookData.authors}</Text>
             </Text>
+            <Text style={styles.bookPublication}>
+              Pub {bookData.original_publication_year}
+            </Text>
+            <View style={styles.bookStars}>
+              {[...Array(bookData.average_rating_rounded)].map((e, i) => (
+                <Icon
+                  key={i}
+                  name="star"
+                  size={20}
+                  color="gold"
+                  style={{ color: "gold" }}
+                />
+              ))}
+              <Text style={styles.bookRatings}>
+                ({bookData.average_rating} avg)
+              </Text>
+            </View>
           </View>
         </View>
-      </View>
     );
   }
 
@@ -295,7 +297,8 @@ export default class App extends Component {
   }
 
   renderTopBarSpacer() {
-    if (Platform.OS === "android") {
+    // Fix status bar top space in Expo
+    if (typeof Expo !== "undefined" && Platform.OS === "android") {
       return (
         <View
           style={{
