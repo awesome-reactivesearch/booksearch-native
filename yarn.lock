@@ -137,8 +137,8 @@ anymatch@^1.3.0:
     normalize-path "^2.0.0"
 
 appbase-js@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/appbase-js/-/appbase-js-2.2.1.tgz#4492a7fa04d47bdbcf94393a7719875244076e30"
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/appbase-js/-/appbase-js-2.2.2.tgz#169024c91c312ce6a659c2534092bc8b999a0dc8"
   dependencies:
     babel-polyfill "^6.26.0"
     es6-promise "^4.1.1"
@@ -2237,8 +2237,8 @@ is-builtin-module@^1.0.0:
     builtin-modules "^1.0.0"
 
 is-ci@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/is-ci/-/is-ci-1.0.10.tgz#f739336b2632365061a9d48270cd56ae3369318e"
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-ci/-/is-ci-1.1.0.tgz#247e4162e7860cebbdaf30b774d6b0ac7dcfe7a5"
   dependencies:
     ci-info "^1.0.0"
 
@@ -3380,14 +3380,20 @@ p-finally@^1.0.0:
   resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
 
 p-limit@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-1.1.0.tgz#b07ff2d9a5d88bec806035895a2bab66a27988bc"
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-1.2.0.tgz#0e92b6bedcb59f022c13d0f1949dc82d15909f1c"
+  dependencies:
+    p-try "^1.0.0"
 
 p-locate@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/p-locate/-/p-locate-2.0.0.tgz#20a0103b222a70c8fd39cc2e580680f3dde5ec43"
   dependencies:
     p-limit "^1.1.0"
+
+p-try@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/p-try/-/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
 
 parse-glob@^3.0.4:
   version "3.0.4"
@@ -3641,6 +3647,10 @@ react-native-calendars@^1.16.1:
   dependencies:
     prop-types "^15.5.10"
     xdate "^0.8.0"
+
+react-native-communications@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-communications/-/react-native-communications-2.2.1.tgz#7883b56b20a002eeb790c113f8616ea8692ca795"
 
 "react-native-drawer@https://github.com/GeekyAnts/react-native-drawer":
   version "2.3.0"
@@ -4482,8 +4492,8 @@ ua-parser-js@^0.7.9:
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.17.tgz#e9ec5f9498b9ec910e7ae3ac626a805c4d09ecac"
 
 uglify-es@^3.1.8:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.3.3.tgz#095f5314d2a5d27e215390e50fa90751473dac2f"
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.3.4.tgz#2d592678791e5310456bbc95e952139e3b13167a"
   dependencies:
     commander "~2.12.1"
     source-map "~0.6.1"
