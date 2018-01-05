@@ -300,6 +300,21 @@ export default class App extends Component {
     );
   }
 
+  onAllData(items, loadMore) {
+    return (
+      <FlatList
+        style={{ width: '100%', marginTop: -25 }}
+        data={items || []}
+        keyExtractor={item => item.id}
+        renderItem={({ item }) => (
+          this.renderBookCard(item)
+        )}
+        onEndReachedThreshold={0.5}
+        onEndReached={loadMore}
+      />
+    )
+  }
+
   renderTopBarSpacer() {
     if (Platform.OS === "android") {
       return (
