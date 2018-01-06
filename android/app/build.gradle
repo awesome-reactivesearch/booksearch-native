@@ -101,8 +101,8 @@ android {
         applicationId "com.booksnative"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 2
-        versionName "1.1"
+        versionCode 4
+        versionName "1.3"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
