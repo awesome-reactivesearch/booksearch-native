@@ -274,7 +274,7 @@ export default class App extends Component {
                 />
               ))}
               <Text style={styles.bookRatings}>
-                ({bookData.average_rating} avg)
+                ({bookData.average_rating})
               </Text>
             </View>
           </View>
