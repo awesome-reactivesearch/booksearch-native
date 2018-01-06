@@ -22,7 +22,7 @@
     "appcenter-analytics": "^1.1.0",
     "appcenter-crashes": "^1.1.0",
     "react": "16.0.0",
-    "react-native": "0.50.3",
+    "react-native": "0.49.0",
     "react-native-communications": "^2.2.1",
     "react-native-vector-icons": "^4.4.3"
   }
