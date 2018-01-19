@@ -20,7 +20,6 @@ import {
   Content,
   Button,
   Spinner,
-  // Icon
 } from "native-base";
 import Icon from "react-native-vector-icons/FontAwesome";
 import {
@@ -170,18 +169,12 @@ const styles = StyleSheet.create({
 });
 
 export default class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      topics: [],
-      showNav: false,
-      isReady: false,
-      statusBarColor: "#3cb371"
-    };
-    this.handleToggleFilters = this.handleToggleFilters.bind(this);
-    this.toggleTopic = this.toggleTopic.bind(this);
-    this.onAllData = this.onAllData.bind(this);
-    this.resetTopic = this.resetTopic.bind(this);
+
+  state = {
+    topics: [],
+    showNav: false,
+    isReady: false,
+    statusBarColor: "#3cb371"
   }
 
   async componentWillMount() {
@@ -193,57 +186,7 @@ export default class App extends Component {
     this.setState({ isReady: true });
   }
 
-  handleToggleFilters() {
-    const showNav = !this.state.showNav;
-    this.setState({
-      showNav
-    });
-  }
-
-  toggleTopic(topic) {
-    const topics = [...this.state.topics];
-    const index = topics.indexOf(topic);
-    let nextTopics = [];
-    if (index === -1) {
-      nextTopics = [...topics, topic];
-    } else {
-      nextTopics = topics.slice(0, index).concat(topics.slice(index + 1));
-    }
-    this.setState({
-      topics: nextTopics
-    });
-  }
-
-  resetTopic(topics) {
-    const nextTopics = topics || [];
-    this.setState({
-      topics: nextTopics
-    });
-  }
-
-  renderTopics(data) {
-    if (data.topics.length > 0) {
-      return data.topics.slice(0, 3).map(topic => (
-        <Text
-          style={{
-            borderRadius: 6,
-            backgroundColor: "#3cb371",
-            color: "white",
-            marginRight: 7,
-            marginBottom: 5,
-            padding: 5
-          }}
-          key={`${data.name}-${topic}`}
-        >
-          #{topic}
-        </Text>
-      ));
-    } else {
-      return null;
-    }
-  }
-
-  renderBookCard(bookData) {
+  renderBookCard = (bookData) => {
     return (
       <TouchableOpacity onPress={() => web("https://google.com/search?q=" + bookData.original_title)}>
         <View style={[styles.fullWidth, styles.booksRow]}>
@@ -283,7 +226,7 @@ export default class App extends Component {
     );
   }
 
-  onAllData(items, loadMore) {
+  onAllData = (items) => {
     return (
       <FlatList
         style={{ width: '100%', marginTop: -25 }}
@@ -292,13 +235,11 @@ export default class App extends Component {
         renderItem={({ item }) => (
           this.renderBookCard(item)
         )}
-        onEndReachedThreshold={0.5}
-        onEndReached={loadMore}
       />
     )
   }
 
-  renderTopBarSpacer() {
+  renderTopBarSpacer = () => {
     // Fix status bar top space in Expo
     if (typeof Expo !== "undefined" && Platform.OS === "android") {
       return (
