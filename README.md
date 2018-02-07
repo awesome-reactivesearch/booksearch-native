@@ -1,6 +1,6 @@
 # Book Search Native
 
-Built using [react](https://facebook.github.io/react/), [react-native](https://facebook.github.io/react-native/) and  [reactivebase-native](https://github.com/appbaseio/reactivebase-native).
+Built using [react](https://facebook.github.io/react/), [react-native](https://facebook.github.io/react-native/) and  [reactivesearch-native](https://github.com/appbaseio/reactivesearch-native).
 
 Based on [Book Search web app](https://appbaseio-apps.github.io/booksearch/) built using [reactivesearch](https://opensource.appbase.io/reactivesearch/).
 
